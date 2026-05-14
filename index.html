@@ -50,7 +50,10 @@
     </div>
 
     <script>
-        function toggleBulb() {
+        var clickSound = new Audio('ClickSound.mp3');
+        function toggleBulb() 
+            clickSound.currentTime = 0;
+            clickSound.play();
             var img = document.getElementById('bulbImage');
             var btn = document.getElementById('switchBtn');
             var src = img.getAttribute('src');
